@@ -1,3 +1,32 @@
-<mat-toolbar>
-  <p>Secondary Navbar</p>
+<mat-toolbar class="secondary-navbar" color="primary">
+  <mat-icon aria-hidden="false" aria-label="arrow back icon">arrow_back</mat-icon>
+  <div class="mat-body-1">Búsqueda de nóminas</div>
+  <span class="spacer"></span>
+  <span class="mat-body-1">TODOS</span><mat-icon class="navbar-item" aria-hidden="false" aria-label="sort icon">sort</mat-icon>
+  <span class="mat-body-1">TODOS</span><mat-icon class="navbar-item" aria-hidden="false" aria-label="circle icon">stop_circle</mat-icon>
+  <app-month-picker></app-month-picker>
+  <app-year-picker></app-year-picker>
+  <button (click)="show = !show" class="mat-elevation-z0" mat-button aria-label="Search icon"><mat-icon>search</mat-icon></button>
+    <!-- show = {{show}} -->
+    <br>
+    <div *ngIf="show; else elseBlock">
+    </div>
+    <ng-template #elseBlock>
+      <mat-form-field floatLabel="never">
+        <!-- <mat-label>Filter</mat-label> -->
+        <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+        <!-- <mat-icon matSuffix>search</mat-icon> -->
+      </mat-form-field>
+    </ng-template>
+  
+  <!-- <button class="mat-elevation-z0" mat-button aria-label="Search icon">
+    <mat-icon>search</mat-icon>
+  </button> -->
+  <mat-menu #moreMenu="matMenu">
+    <button mat-menu-item>Opción 1</button>
+    <button mat-menu-item>Opción 2</button>
+  </mat-menu>
+  <button class="mat-elevation-z0" mat-button [matMenuTriggerFor]="moreMenu" aria-label="More icon">
+    <mat-icon>more_vert</mat-icon>
+  </button>
 </mat-toolbar>

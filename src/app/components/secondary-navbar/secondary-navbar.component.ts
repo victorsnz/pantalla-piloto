@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgIf } from '@angular/common'
+
 
 @Component({
   selector: 'app-secondary-navbar',
@@ -12,4 +14,5 @@ export class SecondaryNavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  show = true;
 }

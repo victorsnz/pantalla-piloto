@@ -1,5 +1,14 @@
-<mat-toolbar>
+<mat-toolbar class="main-navbar" color="primary">
   <button mat-icon-button aria-label="Icon-button with menu icon">
     <mat-icon>menu</mat-icon>
+  </button>
+  <img class= "logo" src="../../../assets/logo_blanco.png" alt="logo coca cola andina">
+  <span class="spacer"></span>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item>Opción 1</button>
+    <button mat-menu-item>Opción 2</button>
+  </mat-menu>
+  <button class="user-button mat-elevation-z0" mat-mini-fab [matMenuTriggerFor]="userMenu" color="primary" aria-label="User icon-button">
+    <p>MN</p>
   </button>
 </mat-toolbar>

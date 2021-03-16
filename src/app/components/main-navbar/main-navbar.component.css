@@ -1,0 +1,16 @@
+.main-navbar {
+    background-color: #2297F3;
+    height: 50px;
+}
+
+.logo {
+    width: 125px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-button {
+    background-color: #1776D2;
+    margin-right: 3rem;
+}
