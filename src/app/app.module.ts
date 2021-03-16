@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSortModule } from '@angular/material/sort'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,19 +9,24 @@ import { MainNavbarComponent } from './components/main-navbar/main-navbar.compon
 import { SecondaryNavbarComponent } from './components/secondary-navbar/secondary-navbar.component';
 import { BodyComponent } from './components/body/body.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
+import { YearPickerComponent } from './components/year-picker/year-picker.component';
+import { MonthPickerComponent } from './components/month-picker/month-picker.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainNavbarComponent,
     SecondaryNavbarComponent,
+    MonthPickerComponent,
+    MainNavbarComponent,
+    YearPickerComponent,
+    DataTableComponent,
     BodyComponent,
-    DataTableComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    BrowserModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
