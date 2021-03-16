@@ -11,5 +11,9 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+  // solucion para MatTableDataSource
+  "angularCompilerOptions": {
+    "enableIvy": false
+  }
 }
