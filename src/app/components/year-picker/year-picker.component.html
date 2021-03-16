@@ -1,0 +1,6 @@
+<mat-form-field floatLabel="never">
+  <mat-label>Año</mat-label>
+  <input matInput [matDatepicker]="yearPicker">
+  <mat-datepicker-toggle matSuffix [for]="yearPicker"></mat-datepicker-toggle>
+  <mat-datepicker #yearPicker startView="multi-year"></mat-datepicker>
+</mat-form-field>
