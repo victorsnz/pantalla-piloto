@@ -73,7 +73,12 @@
           <ng-template #blank>                                                
           </ng-template>
           <ng-template #obs>
-            <mat-icon class="comment" aria-hidden="false" aria-label="comment icon">comment</mat-icon>                                                          
+            <mat-menu #commentMenu="matMenu">
+              <div class="comment"> {{element.obs}} </div>
+            </mat-menu>
+            <button class="mat-elevation-z0" [matMenuTriggerFor]="commentMenu" mat-button aria-label="Comment icon-button">
+              <mat-icon class="comment-icon" aria-hidden="false" aria-label="comment icon">comment</mat-icon>                                                          
+            </button>
           </ng-template> 
           <!-- {{element.obs}} -->
         </td>

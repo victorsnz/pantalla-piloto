@@ -49,6 +49,8 @@ table{
     color: #ED3F7A;
 }
 
+.comment { padding: 2px 10px; }
+
 mat-grid-list { background-color: white; }
 
 .paginator {
