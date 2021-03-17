@@ -44,17 +44,12 @@ const ELEMENT_DATA: Items[] = [
 
 
 export class DataTableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['checkbox', 'documento', 'nombre', 'mes', 'anio', 'tipo', 'estado', 'obs'];
+  displayedColumns: string[] = ['checkbox', 'documento', 'nombre', 'mes', 'anio', 'tipo', 'estado', 'obs', 'more'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   
-  
-
-  // ngOnInit() {
-  //   this.dataSource.sort = this.sort;
-  // }
   ngAfterViewInit() {
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

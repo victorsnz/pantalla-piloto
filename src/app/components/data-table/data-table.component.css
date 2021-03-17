@@ -38,6 +38,17 @@ table{
     vertical-align: middle;
 }
 
+.green-circle {
+    color: #4BB04F;
+    height: 10px;
+}
+.orange-circle {
+    color: #FFC113;
+}
+.red-circle {
+    color: #ED3F7A;
+}
+
 mat-grid-list { background-color: white; }
 
 .paginator {

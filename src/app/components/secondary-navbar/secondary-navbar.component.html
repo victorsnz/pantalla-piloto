@@ -7,21 +7,14 @@
   <app-month-picker></app-month-picker>
   <app-year-picker></app-year-picker>
   <button (click)="show = !show" class="mat-elevation-z0" mat-button aria-label="Search icon"><mat-icon>search</mat-icon></button>
-    <!-- show = {{show}} -->
     <br>
     <div *ngIf="show; else elseBlock">
     </div>
     <ng-template #elseBlock>
       <mat-form-field floatLabel="never">
-        <!-- <mat-label>Filter</mat-label> -->
         <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
-        <!-- <mat-icon matSuffix>search</mat-icon> -->
       </mat-form-field>
     </ng-template>
-  
-  <!-- <button class="mat-elevation-z0" mat-button aria-label="Search icon">
-    <mat-icon>search</mat-icon>
-  </button> -->
   <mat-menu #moreMenu="matMenu">
     <button mat-menu-item>Opción 1</button>
     <button mat-menu-item>Opción 2</button>

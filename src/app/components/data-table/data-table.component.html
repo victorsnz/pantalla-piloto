@@ -11,7 +11,7 @@
       <!-- Checkbox Column -->
       <ng-container matColumnDef="checkbox">
         <th mat-header-cell *matHeaderCellDef> <mat-checkbox></mat-checkbox> </th>
-        <td mat-cell *matCellDef="let element"> <mat-checkbox>{{element.checkbox}}</mat-checkbox> </td>
+        <td mat-cell *matCellDef="let element"> <mat-checkbox> </mat-checkbox> </td>
       </ng-container>
 
       <!-- Documento Column -->
@@ -47,13 +47,50 @@
         <!-- Estado Column -->
       <ng-container matColumnDef="estado">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
-        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+        <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.estado == 1; then verde; else sino"></ng-container>
+              <ng-template #verde>
+                <mat-icon class="green-circle" aria-hidden="false" aria-label="green circle">stop_circle</mat-icon>
+              </ng-template>
+              <ng-template #sino>
+                <ng-container *ngIf="element.estado == 2; then naranja; else rojo"></ng-container>
+                <ng-template #naranja>
+                  <mat-icon class="orange-circle" aria-hidden="false" aria-label="orange circle">stop_circle</mat-icon>
+                </ng-template>
+                <ng-template #rojo>
+                  <mat-icon class="red-circle" aria-hidden="false" aria-label="red circle">stop_circle</mat-icon>
+                </ng-template>
+              </ng-template>
+          <!-- {{element.estado}} -->
+        </td>
       </ng-container>
 
         <!-- Obs. Column -->
       <ng-container matColumnDef="obs">
         <th mat-header-cell *matHeaderCellDef> Obs. </th>
-        <td mat-cell *matCellDef="let element"> {{element.obs}} </td>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="element.obs == ''; then blank else obs"></ng-container>
+          <ng-template #blank>                                                
+          </ng-template>
+          <ng-template #obs>
+            <mat-icon class="comment" aria-hidden="false" aria-label="comment icon">comment</mat-icon>                                                          
+          </ng-template> 
+          <!-- {{element.obs}} -->
+        </td>
+      </ng-container>
+
+      <!-- Ver Más Column -->
+      <ng-container matColumnDef="more">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+        <td mat-cell *matCellDef="let element">
+          <button class="mat-elevation-z0" mat-button [matMenuTriggerFor]="moreOps" aria-label="More icon">
+            <mat-menu #moreOps="matMenu">
+              <button mat-menu-item>Opción 1</button>
+              <button mat-menu-item>Opción 2</button>
+            </mat-menu>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
@@ -66,7 +103,20 @@
     </mat-grid-tile>
     <mat-grid-tile>
       <div class="options">
-        <div>a b c d </div>
+        <div>
+          <button class="mat-elevation-z0" mat-button aria-label="archive button">
+            <mat-icon>archive</mat-icon>
+          </button>
+          <button class="mat-elevation-z0" mat-button aria-label="delete button">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button class="mat-elevation-z0" mat-button aria-label="download button">
+            <mat-icon>download</mat-icon>
+          </button>
+          <button class="mat-elevation-z0" mat-button aria-label="iridescent button">
+            <mat-icon>wb_iridescent</mat-icon>
+          </button>
+        </div>
       </div>
     </mat-grid-tile>
   </mat-grid-list>
