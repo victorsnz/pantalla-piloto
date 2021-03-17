@@ -4,7 +4,7 @@
     margin-right: auto;
     margin-left: auto;
     min-height: 400px;
-    height: 519px;
+    height: 540px;
     width: 80%;
 }
 
@@ -12,10 +12,21 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 95%;
-    height: 480px;
+    height: 500px;
     width: 95%;
     overflow: auto;
 }
+
+.mat-row {
+    margin-right: auto;
+    margin-left: auto;
+    height: 30px;
+    width: 95%;
+}
+
+/* .row-format {
+
+} */
 
 table{
     width: 100%;
@@ -28,19 +39,59 @@ table{
 
 .mat-cell,
 .mat-header-cell {
-    word-wrap: initial;
-    display: table-cell;
-    padding: 0px 5px;
-    line-break: unset;
-    width: auto;
-    white-space: nowrap;
-    overflow: hidden;
-    vertical-align: middle;
+    font-size: smaller;
+}
+.cb-format {
+    width: 30px;
+}
+
+.doc-format {
+    width: 120px;
+    font-weight: 600;
+}
+
+.n-format {
+    width: 320px;
+}
+
+.m-format {
+    width: 100px;
+}
+
+.a-format {
+    width: 60px;
+}
+
+.t-format {
+    width: 120px;
+}
+
+
+
+.e-format {
+    width: 100px;
+    text-align: center;
+}
+
+
+.o-format {
+    width: 30px;
+    text-align: center;
+}
+
+.more-format {
+    width: 30px;
+    text-align: right;
+}
+
+.mat-divider {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .green-circle {
     color: #4BB04F;
-    height: 10px;
 }
 .orange-circle {
     color: #FFC113;
@@ -51,9 +102,22 @@ table{
 
 .comment { padding: 2px 10px; }
 
-.table-icon { color: #757575 }
+.table-icon { 
+    color: #757575;
+    font-size: 20px;
+    /* width: 20px;  */
+}
 
-.options-icon { color: #BDBDBD; }
+.options-icon { 
+    color: #BDBDBD;
+    font-size: 20px;
+    /* height: 30px !important;
+    width: 5px !important;
+    padding: 0;  */
+}
+/* .options-icon .mat-icon {
+    font-size: 20px;
+} */
 
 mat-grid-list { background-color: white; }
 
@@ -64,7 +128,7 @@ mat-grid-list { background-color: white; }
 
 .options {
     position:absolute;
-    right: 0px;
+    right: 30px;
 }
 
 /* Custom Scrollbar */

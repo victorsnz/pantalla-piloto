@@ -7,12 +7,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
+
 
 
 const Material =[
@@ -23,6 +25,7 @@ const Material =[
   MatCheckboxModule,
   MatGridListModule,
   MatToolbarModule,
+  MatDividerModule,
   MatButtonModule,
   MatTableModule,
   MatInputModule,

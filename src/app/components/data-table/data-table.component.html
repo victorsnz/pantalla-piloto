@@ -10,44 +10,44 @@
 
       <!-- Checkbox Column -->
       <ng-container matColumnDef="checkbox">
-        <th mat-header-cell *matHeaderCellDef> <mat-checkbox></mat-checkbox> </th>
-        <td mat-cell *matCellDef="let element"> <mat-checkbox> </mat-checkbox> </td>
+        <th   mat-header-cell *matHeaderCellDef> <mat-checkbox></mat-checkbox> </th>
+        <td class="cb-format" mat-cell *matCellDef="let element"> <mat-checkbox> </mat-checkbox> </td>
       </ng-container>
 
       <!-- Documento Column -->
       <ng-container matColumnDef="documento">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Documento </th>
-        <td mat-cell *matCellDef="let element"> {{element.documento}} </td>
+        <th   mat-header-cell *matHeaderCellDef mat-sort-header> Documento </th>
+        <td class="doc-format" mat-cell *matCellDef="let element"> {{element.documento}} </td>
       </ng-container>
 
       <!-- Nombre Column -->
       <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        <th   mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+        <td class="n-format" mat-cell *matCellDef="let element"> {{element.nombre}} </td>
       </ng-container>
 
       <!-- Mes Column -->
       <ng-container matColumnDef="mes">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Mes </th>
-        <td mat-cell *matCellDef="let element"> {{element.mes}} </td>
+        <th   mat-header-cell *matHeaderCellDef mat-sort-header> Mes </th>
+        <td class="m-format" mat-cell *matCellDef="let element"> {{element.mes}} </td>
       </ng-container>
 
       <!-- Año Column -->
       <ng-container matColumnDef="anio">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Año </th>
-        <td mat-cell *matCellDef="let element"> {{element.anio}} </td>
+        <th   mat-header-cell *matHeaderCellDef mat-sort-header> Año </th>
+        <td class="a-format" mat-cell *matCellDef="let element"> {{element.anio}} </td>
       </ng-container>
 
         <!-- Tipo Column -->
       <ng-container matColumnDef="tipo">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
-        <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+        <th   mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
+        <td class="t-format" mat-cell *matCellDef="let element"> {{element.tipo}} </td>
       </ng-container>
 
         <!-- Estado Column -->
       <ng-container matColumnDef="estado">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
-        <td mat-cell *matCellDef="let element">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><div class="e-format">Estado</div></th>
+        <td class="e-format" mat-cell *matCellDef="let element">
             <ng-container *ngIf="element.estado == 1; then verde; else sino"></ng-container>
               <ng-template #verde>
                 <mat-icon class="green-circle" aria-hidden="false" aria-label="green circle">stop_circle</mat-icon>
@@ -66,8 +66,8 @@
 
         <!-- Obs. Column -->
       <ng-container matColumnDef="obs">
-        <th mat-header-cell *matHeaderCellDef> Obs. </th>
-        <td mat-cell *matCellDef="let element">
+        <th class="o-format" mat-header-cell *matHeaderCellDef> Obs. </th>
+        <td class="o-format" mat-cell *matCellDef="let element">
           <ng-container *ngIf="element.obs == ''; then blank else obs"></ng-container>
           <ng-template #blank>                                                
           </ng-template>
@@ -84,8 +84,8 @@
 
       <!-- Ver Más Column -->
       <ng-container matColumnDef="more">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
-        <td mat-cell *matCellDef="let element">
+        <th class="more-format" mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+        <td class="more-format" mat-cell *matCellDef="let element">
           <button class="mat-elevation-z0" mat-button [matMenuTriggerFor]="moreOps" aria-label="More icon">
             <mat-menu #moreOps="matMenu">
               <button mat-menu-item>Opción 1</button>
@@ -98,27 +98,33 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
     </table>
   </div>
+  <mat-divider></mat-divider>
   <mat-grid-list cols="2" rowHeight="40px">
     <mat-grid-tile>
-      <mat-paginator class="paginator" #paginator [pageSize]="10" hidePageSize></mat-paginator>
+      <mat-paginator class="paginator" #paginator [pageSize]="17" hidePageSize></mat-paginator>
     </mat-grid-tile>
     <mat-grid-tile>
       <div class="options">
         <div>
-          <button class="options-icon mat-elevation-z0" mat-button aria-label="archive button">
-            <mat-icon>archive</mat-icon>
-          </button>
-          <button class="options-icon mat-elevation-z0" mat-button aria-label="delete button">
-            <mat-icon>delete</mat-icon>
-          </button>
-          <button class="options-icon mat-elevation-z0" mat-button aria-label="download button">
-            <mat-icon>download</mat-icon>
-          </button>
-          <button class="options-icon mat-elevation-z0" mat-button aria-label="iridescent button">
-            <mat-icon>wb_iridescent</mat-icon>
-          </button>
+          <mat-icon class="options-icon">archive</mat-icon>
+          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="archive button">
+          </button> -->
+          <mat-icon class="options-icon">delete</mat-icon>
+          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="delete button">
+          </button> -->
+          <mat-icon class="options-icon">download</mat-icon>
+          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="download button">
+          </button> -->
+          <mat-icon class="options-icon">wb_iridescent</mat-icon>
+          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="iridescent button">
+          </button> -->
         </div>
       </div>
     </mat-grid-tile>
