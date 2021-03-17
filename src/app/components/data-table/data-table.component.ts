@@ -21,16 +21,20 @@ const ELEMENT_DATA: Items[] = [
   {checkbox: false, documento: 505025451, nombre: "Ali, Muhammad", mes: 4, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
   {checkbox: false, documento: 648987456, nombre: "Jobs, Steve", mes: 1, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
   {checkbox: false, documento: 648987456, nombre: "Jobs, Steve", mes: 2, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
-  {checkbox: false, documento: 648987456, nombre: "Jobs, Steve", mes: 3, anio: 2019, tipo: "Mensual", estado: 3, obs: "Lorem ipsum dolor"},
+  {checkbox: false, documento: 648987456, nombre: "Jobs, Steve", mes: 3, anio: 2019, tipo: "Mensual", estado: 3, obs: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
   {checkbox: false, documento: 648987456, nombre: "Jobs, Steve", mes: 4, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
   {checkbox: false, documento: 603027333, nombre: "Kent, Clark", mes: 1, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
   {checkbox: false, documento: 603027333, nombre: "Kent, Clark", mes: 2, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
   {checkbox: false, documento: 603027333, nombre: "Kent, Clark", mes: 3, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
-  {checkbox: false, documento: 603027333, nombre: "Kent, Clark", mes: 4, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
+  {checkbox: false, documento: 603027333, nombre: "Kent, Clark", mes: 4, anio: 2019, tipo: "Mensual", estado: 2, obs: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
   {checkbox: false, documento: 469901345, nombre: "Monroe, Marilyn", mes: 1, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
   {checkbox: false, documento: 469901345, nombre: "Monroe, Marilyn", mes: 2, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
   {checkbox: false, documento: 469901345, nombre: "Monroe, Marilyn", mes: 3, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
   {checkbox: false, documento: 469901345, nombre: "Monroe, Marilyn", mes: 4, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
+  {checkbox: false, documento: 470012456, nombre: "Bowie, David", mes: 1, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
+  {checkbox: false, documento: 470012456, nombre: "Bowie, David", mes: 2, anio: 2019, tipo: "Mensual", estado: 2, obs: ""},
+  {checkbox: false, documento: 470012456, nombre: "Bowie, David", mes: 3, anio: 2019, tipo: "Mensual", estado: 3, obs: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"},
+  {checkbox: false, documento: 470012456, nombre: "Bowie, David", mes: 4, anio: 2019, tipo: "Mensual", estado: 1, obs: ""},
 ];
 
 /**
