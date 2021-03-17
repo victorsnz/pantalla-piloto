@@ -61,7 +61,6 @@
                   <mat-icon class="red-circle" aria-hidden="false" aria-label="red circle">stop_circle</mat-icon>
                 </ng-template>
               </ng-template>
-          <!-- {{element.estado}} -->
         </td>
       </ng-container>
 
@@ -77,7 +76,7 @@
               <div class="comment"> {{element.obs}} </div>
             </mat-menu>
             <button class="mat-elevation-z0" [matMenuTriggerFor]="commentMenu" mat-button aria-label="Comment icon-button">
-              <mat-icon class="comment-icon" aria-hidden="false" aria-label="comment icon">comment</mat-icon>                                                          
+              <mat-icon class="table-icon" aria-hidden="false" aria-label="comment icon">comment</mat-icon>                                                          
             </button>
           </ng-template> 
         </td>
@@ -92,7 +91,7 @@
               <button mat-menu-item>Opción 1</button>
               <button mat-menu-item>Opción 2</button>
             </mat-menu>
-            <mat-icon>more_horiz</mat-icon>
+            <mat-icon class="table-icon">more_horiz</mat-icon>
           </button>
         </td>
       </ng-container>
@@ -108,16 +107,16 @@
     <mat-grid-tile>
       <div class="options">
         <div>
-          <button class="mat-elevation-z0" mat-button aria-label="archive button">
+          <button class="options-icon mat-elevation-z0" mat-button aria-label="archive button">
             <mat-icon>archive</mat-icon>
           </button>
-          <button class="mat-elevation-z0" mat-button aria-label="delete button">
+          <button class="options-icon mat-elevation-z0" mat-button aria-label="delete button">
             <mat-icon>delete</mat-icon>
           </button>
-          <button class="mat-elevation-z0" mat-button aria-label="download button">
+          <button class="options-icon mat-elevation-z0" mat-button aria-label="download button">
             <mat-icon>download</mat-icon>
           </button>
-          <button class="mat-elevation-z0" mat-button aria-label="iridescent button">
+          <button class="options-icon mat-elevation-z0" mat-button aria-label="iridescent button">
             <mat-icon>wb_iridescent</mat-icon>
           </button>
         </div>
