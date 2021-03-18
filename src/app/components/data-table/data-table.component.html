@@ -1,18 +1,11 @@
 <!-- <mat-form-field floatLabel="never">
   <mat-label>Filter</mat-label>
   <input type="search" matInput (keyup)="applyFilter($event)" placeholder="" #input>
-  <mat-icon matSuffix>search</mat-icon>
 </mat-form-field> -->
 
 <div class="container mat-elevation-z4">
   <div class="table-container">
     <table mat-table [dataSource]="dataSource" matSort>
-
-      <!-- Checkbox Column -->
-      <!-- <ng-container matColumnDef="checkbox">
-        <th   mat-header-cell *matHeaderCellDef> <mat-checkbox></mat-checkbox> </th>
-        <td class="cb-format" mat-cell *matCellDef="let element"> <mat-checkbox> </mat-checkbox> </td>
-      </ng-container> -->
 
       <!-- Checkbox Column -->
       <ng-container matColumnDef="select">
@@ -132,17 +125,9 @@
       <div class="options">
         <div>
           <mat-icon class="options-icon">archive</mat-icon>
-          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="archive button">
-          </button> -->
           <mat-icon class="options-icon">delete</mat-icon>
-          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="delete button">
-          </button> -->
           <mat-icon class="options-icon">download</mat-icon>
-          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="download button">
-          </button> -->
           <mat-icon class="options-icon">wb_iridescent</mat-icon>
-          <!-- <button class="options-icon mat-elevation-z0" mat-button aria-label="iridescent button">
-          </button> -->
         </div>
       </div>
     </mat-grid-tile>

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NgIf } from '@angular/common'
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -8,11 +7,16 @@ import { NgIf } from '@angular/common'
   styleUrls: ['./secondary-navbar.component.css']
 })
 export class SecondaryNavbarComponent implements OnInit {
-
+  
   constructor() { }
+  
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.filt = filterValue.trim().toLowerCase();
+  // }
 
   ngOnInit(): void {
   }
-
+  
   show = true;
 }

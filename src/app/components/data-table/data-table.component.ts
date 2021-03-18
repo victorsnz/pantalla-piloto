@@ -1,8 +1,10 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, Input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+
+import { FilterDataService } from './../../services/filter-data.service';
 
 export interface Items {
   // checkbox: boolean;
@@ -54,6 +56,9 @@ export class DataTableComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<Items>(ELEMENT_DATA);
   selection = new SelectionModel<Items>(true, []);
 
+
+  constructor(public fdService: FilterDataService) {}
+
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -84,9 +89,16 @@ export class DataTableComponent implements AfterViewInit {
       this.dataSource.paginator = this.paginator;
   }
 
+  @Input() filtro: string = "f";
+  
+  // applyFilter(fdService: FilterDataService){
+  //   // const filterValue = fdService;
+  //   this.dataSource.filter = fdService.filterData;
+  // }
   applyFilter(event: Event){
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+  
 }
 
