@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pantalla-piloto": {
+      "hosting": {
+        "pantalla-piloto": [
+          "pantalla-piloto"
+        ]
+      }
+    }
+  }
+}
