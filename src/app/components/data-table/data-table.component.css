@@ -144,3 +144,9 @@ mat-grid-list { background-color: white; }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover { background: #B3B3B3; }
+
+/* Custom Height of the scrollbar*/
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 56px;
+}

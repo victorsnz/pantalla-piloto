@@ -4,10 +4,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 
-import { FilterDataService } from './../../services/filter-data.service';
-
 export interface Items {
-  // checkbox: boolean;
   position: number;
   documento: number;
   nombre: string;
@@ -57,7 +54,7 @@ export class DataTableComponent implements AfterViewInit {
   selection = new SelectionModel<Items>(true, []);
 
 
-  constructor(public fdService: FilterDataService) {}
+  constructor() {}
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
@@ -89,7 +86,7 @@ export class DataTableComponent implements AfterViewInit {
       this.dataSource.paginator = this.paginator;
   }
 
-  @Input() filtro: string = "f";
+  // @Input() filtro: string = "f";
   
   // applyFilter(fdService: FilterDataService){
   //   // const filterValue = fdService;
