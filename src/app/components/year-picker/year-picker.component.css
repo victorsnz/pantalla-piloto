@@ -1,3 +1,20 @@
+mat-label {
+  font-size: small;
+  color: white;
+}
+
+
 mat-datepicker-toggle {
   color: white !important;
+}
+
+mat-form-field {
+  width: 58px;
+  margin: 0px 5px;
+}
+
+mat-form-field {
+  width: 58px;
+  margin: 0px 5px;
+  color:transparent;
 }
