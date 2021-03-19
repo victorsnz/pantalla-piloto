@@ -1,25 +1,72 @@
 <mat-toolbar class="secondary-navbar" color="primary">
-  <mat-icon aria-hidden="false" aria-label="arrow back icon">arrow_back</mat-icon>
-  <div class="mat-body-1">Búsqueda de nóminas</div>
+  <mat-icon class="arrow-icon navbar-item" aria-hidden="false" aria-label="arrow back icon">arrow_back</mat-icon>
+
+  <div class="navbar-text-nom">Búsqueda de nóminas</div>
   <span class="spacer"></span>
-  <span class="mat-body-1">TODOS</span><mat-icon class="navbar-item" aria-hidden="false" aria-label="sort icon">sort</mat-icon>
-  <span class="mat-body-1">TODOS</span><mat-icon class=" navbar-item-circle navbar-item" aria-hidden="false" aria-label="circle icon">stop_circle</mat-icon>
-  <app-month-picker></app-month-picker>
-  <app-year-picker></app-year-picker>
-  <button (click)="show = !show" class="mat-elevation-z0" mat-button aria-label="Search icon"><mat-icon>search</mat-icon></button>
-    <br>
-    <div *ngIf="show; else elseBlock">
-    </div>
-    <ng-template #elseBlock>
-      <mat-form-field floatLabel="never">
-        <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
-      </mat-form-field>
-    </ng-template>
+
+  <span class="navbar-item-container">
+    <mat-form-field class="selector" floatLabel="never">
+      <mat-label>Select</mat-label>
+      <mat-select class="select">
+        <mat-option class="selector-option" value="one">First option</mat-option>
+        <mat-option class="selector-option" value="two">Second option</mat-option>
+        <mat-option class="selector-option" value="three">TODOS</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-icon class="navbar-item-notes navbar-item" aria-hidden="false" aria-label="sort icon">notes</mat-icon>
+  </span>
+
+
+  <span class="navbar-item-container">
+    <mat-form-field class="selector" floatLabel="never">
+      <mat-label>Select</mat-label>
+      <mat-select class="select">
+        <mat-option class="selector-option" value="one">First option</mat-option>
+        <mat-option class="selector-option" value="two">Second option</mat-option>
+        <mat-option class="selector-option" value="three">TODOS</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-icon class="navbar-item navbar-item-circle" aria-hidden="false" aria-label="circle icon">stop_circle</mat-icon>
+  </span>
+
+  <span class="navbar-item-container">
+    <mat-form-field class="selector" floatLabel="never">
+      <mat-label>Select</mat-label>
+      <mat-select class="select">
+        <mat-option class="selector-option" value="one">First option</mat-option>
+        <mat-option class="selector-option" value="two">Second option</mat-option>
+        <mat-option class="selector-option" value="three">TODOS</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-icon class="navbar-item" aria-hidden="false" aria-label="circle icon">date_range</mat-icon>
+  </span>
+  
+  <span class="navbar-item-container">
+    <mat-form-field class="selector" floatLabel="never">
+      <mat-label>Select</mat-label>
+      <mat-select class="select">
+        <mat-option class="selector-option" value="one">2018</mat-option>
+        <mat-option class="selector-option" value="two">2019</mat-option>
+        <mat-option class="selector-option" value="three">2020</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-icon class="navbar-item" aria-hidden="false" aria-label="circle icon">date_range</mat-icon>
+  </span>
+
+  <div *ngIf="show; else elseBlock">
+  </div>
+  <ng-template #elseBlock>
+    <mat-form-field floatLabel="never">
+      <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+    </mat-form-field>
+  </ng-template>
+  <button (click)="show = !show" class="secondary-navbar-button mat-elevation-z0" mat-button aria-label="Search icon"><mat-icon>search</mat-icon></button>
+
   <mat-menu #moreMenu="matMenu">
     <button mat-menu-item>Opción 1</button>
     <button mat-menu-item>Opción 2</button>
   </mat-menu>
-  <button class="mat-elevation-z0" mat-button [matMenuTriggerFor]="moreMenu" aria-label="More icon">
+  <button class="secondary-navbar-button mat-elevation-z0" mat-button [matMenuTriggerFor]="moreMenu" aria-label="More icon">
     <mat-icon>more_vert</mat-icon>
   </button>
 </mat-toolbar>

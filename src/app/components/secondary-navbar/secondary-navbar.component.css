@@ -1,16 +1,68 @@
 .secondary-navbar {
     background-color: #1776D2;
     height: 40px;
+    padding-left: 11%;
+    padding-right: 10%;
 }
 
-.spacer {
-  flex: 1 1 auto;
+.spacer { flex: 1 1 auto; }
+
+.navbar-item-container {
+  display: flex;
+  align-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .navbar-item {
-    margin-right: 1rem;
+  margin: auto;
+  margin-left: -18px;
+}
+
+.arrow-icon {
+  margin-left: 0px;
 }
 
 .navbar-item-circle {
+  /* margin-left: -18px; */
   color: #2297F3;
+}
+
+.navbar-text {
+  font-size: small;
+  font-weight: 400;
+}
+
+.navbar-text-nom {
+  font-size: medium;
+  font-weight: 400;
+}
+
+.secondary-navbar-button {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+mat-label {
+  font-size: small;
+  color: white;
+}
+
+.selector {
+  width: 60px;
+  margin-bottom: 6px;
+  height: 40px;
+  /* margin-left: 5px; */
+  font-size: small !important;
+  color:transparent;
+  text-align: left !important;
+  /* outline: solid 2px green; */
+}
+
+.selector-option {
+  font-size: small !important;
+}
+
+:host mat-select ::ng-deep .mat-select-value {
+  color: white !important;
 }
